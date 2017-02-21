@@ -1,4 +1,4 @@
-package Test;
+package ExcelReadData;
 
 import java.io.File;
 import java.io.FileInputStream;
@@ -11,7 +11,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 
 
-public class TestClass {
+public class ReadExcel {
 	public static void main(String[] args) throws Exception {
 		System.setProperty("webdriver.chrome.driver", "E://Installer Softwares//chromedriver.exe");
 		WebDriver driver = new ChromeDriver();
@@ -30,7 +30,7 @@ public class TestClass {
 		System.out.println("Row count " + rowcount+1);
 		
 		for(int i=0;i<rowcount;i++){
-			String data1 = sheet1.getRow(i).getCell(0).getgetStringCellValue();
+			String data1 = sheet1.getRow(i).getCell(0).getStringCellValue();
 			System.out.println("Data on Excel on row "+i+" is " +data1);
 		}
 		wb.close();//To avoid memory leak

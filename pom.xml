@@ -3,6 +3,14 @@
   <groupId>test</groupId>
   <artifactId>test</artifactId>
   <version>0.0.1-SNAPSHOT</version>
+  <dependencies>
+<!-- https://mvnrepository.com/artifact/com.relevantcodes/extentreports -->
+<dependency>
+    <groupId>com.relevantcodes</groupId>
+    <artifactId>extentreports</artifactId>
+    <version>2.41.2</version>
+</dependency>
+    </dependencies>
   <build>
     <sourceDirectory>src</sourceDirectory>
     <plugins>
