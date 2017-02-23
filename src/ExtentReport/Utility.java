@@ -15,6 +15,7 @@ public class Utility {
 
 		try {
 			TakesScreenshot ts = (TakesScreenshot) driver;
+			System.out.println(driver+">>>>>>>>>"+ts);
 			File source = ts.getScreenshotAs(OutputType.FILE);
 			String dest = "C:\\Users\\jyotsna.r\\Desktop\\eclipse-java-mars-2-win32-x86_64\\newwspa\\test\\" + screenshotName + ".jpg";
 
@@ -25,7 +26,7 @@ public class Utility {
 			System.out.println("Screenshot taken");
 			return dest;
 		} catch (Exception e) {
-			System.out.println("Exception" + e.getMessage());
+			e.printStackTrace();
 			return e.getMessage();
 		}
 	}

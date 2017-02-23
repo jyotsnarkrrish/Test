@@ -22,7 +22,7 @@ public class VerifyReport {
 		report=new ExtentReports("E:\\JAR\\extentreports-java-v2.41.0\\ExtendJyot.html");
 		logger = report.startTest("Test1VerifyBlogTitle");
 		System.setProperty("webdriver.chrome.driver", "E://Installer Softwares//chromedriver.exe");
-		WebDriver driver = new ChromeDriver();
+		driver = new ChromeDriver();
 		logger.log(LogStatus.INFO, "Browser started");
 		driver.get("http://only-testing-blog.blogspot.in");
 		logger.log(LogStatus.INFO, "Applicationup and running");
@@ -36,10 +36,14 @@ public class VerifyReport {
 		if (result.getStatus() == ITestResult.FAILURE) {
 			
 			String screenshot_path= Utility.captureScreenshot(driver, result.getName());
-			logger.log(LogStatus.FAIL, "Title verification",screenshot_path);
+			System.out.println("screenshot_path111111111111111"+screenshot_path);
+			String image=logger.addScreenCapture(screenshot_path);
+			System.out.println("screenshot_pat222"+image);
+			logger.log(LogStatus.FAIL, "Title verification",image);
 		}
 	report.endTest(logger);
 	report.flush();
-	driver.get("E:\\JAR\\extentreports-java-v2.41.0\\ExtendJyot.html");
+	driver.get("file:///E:/JAR/extentreports-java-v2.41.0/ExtendJyot.html#step-status-filter");
+	driver.quit();
 	}
 }
