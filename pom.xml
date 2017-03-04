@@ -23,6 +23,14 @@
     <artifactId>mysql-connector-java</artifactId>
     <version>5.1.18</version>
 </dependency>
+<!-- https://mvnrepository.com/artifact/com.opencsv/opencsv -->
+<dependency>
+    <groupId>com.opencsv</groupId>
+    <artifactId>opencsv</artifactId>
+    <version>3.8</version>
+</dependency>
+
+
 
     </dependencies>
   <build>
