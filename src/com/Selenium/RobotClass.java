@@ -19,10 +19,10 @@ import org.testng.annotations.Test;
  * Sleep required while uploading file
  */	
 public class RobotClass {
-	// @Test
-	public static void DownloadFile() throws InterruptedException, AWTException {
-		System.setProperty("webdriver.chrome.driver", "E:\\Downloads\\chromedriver.exe");
-		WebDriver driver = new ChromeDriver();
+	WebDriver driver = new ChromeDriver();
+	@Test
+	public void DownloadFile() throws InterruptedException, AWTException {
+		System.setProperty("webdriver.chrome.driver", ".//chromedriver.exe");
 
 		// sample url
 		driver.get("http://spreadsheetpage.com/index.php/file/C35/P10/");
@@ -47,7 +47,7 @@ public class RobotClass {
 
 	@Test
 	public static void UploadFile() throws AWTException, InterruptedException {
-		System.setProperty("webdriver.chrome.driver", "E:\\Downloads\\chromedriver.exe");
+		System.setProperty("webdriver.chrome.driver", ".//chromedriver.exe");
 		WebDriver driver = new ChromeDriver();
 		//driver.get("https://blueimp.github.io/jQuery-File-Upload/basic.html");
 		driver.get("http://cgi-lib.berkeley.edu/ex/fup.html");

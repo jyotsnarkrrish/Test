@@ -7,14 +7,14 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.annotations.Test;
 
 public class Alert_Confirmation {
-	
+	WebDriver driver = new ChromeDriver();
 
 	@Test
 	public void ExampleForConfirmBox() throws InterruptedException {
-		System.setProperty("webdriver.chrome.driver", "E:\\Downloads\\chromedriver.exe");
-		WebDriver driver = new ChromeDriver();
+		System.setProperty("webdriver.chrome.driver", ".//chromedriver.exe");
+		
 		driver.manage().window().maximize();
-		driver.get("E:\\E_Workspace\\Test_Selenium\\src\\com\\Selenium\\Alert.html");
+		driver.get("file:///C:/Users/jyotsna.r/Desktop/eclipse-java-mars-2-win32-x86_64/newwspa/test/src/com/Selenium/Alert.html");
 		
 		driver.findElement(By.xpath("//button[@onclick='confirmFunction()']")).click();
 		Thread.sleep(2000);
@@ -23,5 +23,6 @@ public class Alert_Confirmation {
 		//System.out.println(alert.getText());
 		//alert.dismiss();
 		//alert.sendKeys();
+		driver.close();
 	}
 }

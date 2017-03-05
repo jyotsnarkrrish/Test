@@ -1,4 +1,4 @@
-package com.Selenium;
+/*package com.Selenium;
 import java.sql.SQLException;
 
 import org.openqa.selenium.WebDriver;
@@ -56,3 +56,4 @@ public static void main(String args[]) throws ClassNotFoundException, SQLExcepti
 	}
 
 }
+*/

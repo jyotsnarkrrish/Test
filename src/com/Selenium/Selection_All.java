@@ -9,13 +9,12 @@ import org.openqa.selenium.support.ui.Select;
 import org.testng.annotations.Test;
 
 public class Selection_All {
-	WebDriver driver;
+	WebDriver driver = new ChromeDriver();
 
 	@Test
 	public void selectSamples() throws InterruptedException {
-		System.setProperty("webdriver.chrome.driver", "E:\\Downloads\\chromedriver.exe");
-		WebDriver driver = new ChromeDriver();
-		driver.get("E:\\E_Workspace\\Test_Selenium\\src\\com\\Selenium\\SelectionDropdown.html");
+		System.setProperty("webdriver.chrome.driver", ".//chromedriver.exe");
+		driver.get(".//SelectionDropdown.html");
 		WebElement element = driver.findElement(By.name("Mobdevices"));
 		Select se = new Select(element);
 

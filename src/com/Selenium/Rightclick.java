@@ -15,7 +15,7 @@ WebDriver driver;
 	
 	@BeforeClass
 	public void Setup() {
-		System.setProperty("webdriver.chrome.driver", "E:\\Downloads\\chromedriver.exe");
+		System.setProperty("webdriver.chrome.driver", ".//chromedriver.exe");
 		driver = new ChromeDriver();
 		driver.manage().window().maximize();
 	}

@@ -9,10 +9,11 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.annotations.Test;
 
 public class toolqa {
+	WebDriver driver = new ChromeDriver();
 	@Test
-	private void demo() {
-		System.setProperty("webdriver.chrome.driver", "E:\\Downloads\\chromedriver.exe");
-		WebDriver driver = new ChromeDriver();
+	public void demo() {
+		System.setProperty("webdriver.chrome.driver", ".//chromedriver.exe");
+		
 		driver.get("http://toolsqa.com/iframe-practice-page/");
 		System.out.println(driver.switchTo().frame("iframe1"));
 		driver.findElement(By.name("firstname")).sendKeys("Hello");
@@ -30,6 +31,6 @@ public class toolqa {
 			}
 
 		}
-
+		driver.quit();
 	}
 }

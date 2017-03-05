@@ -22,8 +22,8 @@ public class FileDownloadVerify {
 		
 		@BeforeClass
 		public void testSetup() throws Exception{
-			System.setProperty("webdriver.chrome.driver", "E:\\Downloads\\chromedriver.exe");
-			WebDriver driver = new ChromeDriver();	
+			System.setProperty("webdriver.chrome.driver", ".//chromedriver.exe");
+			driver = new ChromeDriver();	
 			driver.manage().window().maximize();
 			driver.get(URL);
 		}

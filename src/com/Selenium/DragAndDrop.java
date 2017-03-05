@@ -11,9 +11,10 @@ import org.testng.Assert;
 import org.testng.annotations.Test;
 
 public class DragAndDrop {
+	
 	@Test
-	private void DragDrop() {
-		System.setProperty("webdriver.chrome.driver", "E:\\Downloads\\chromedriver.exe");
+	public void DragDrop() {
+		System.setProperty("webdriver.chrome.driver", ".\\chromedriver.exe");
 		WebDriver driver = new ChromeDriver();
 		driver.get("http://jqueryui.com/droppable/");
 		WebDriverWait wait = new WebDriverWait(driver, 5);
