@@ -6,6 +6,18 @@ import org.testng.annotations.Test;
 
 import java.sql.*;
 
+//Step 1- First Load the driver
+
+//Step 2-Then Create a connection
+
+//Step 3- Then Create a statement
+
+//Step 4-  Then Execute your SQL query
+
+//Step 5-  And Store the data in Result set
+
+//Step 6- Finally verify whether data (table) is updated or not
+
 public class Database_selenium_DDL {
 	private Connection connection;
 	private static Statement statement;
